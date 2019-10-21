@@ -13,6 +13,8 @@ Instructions to run from docker:
 Display images taken from the mars rover
 
 This app reads a text with dates and gets a random image from the mars rover from the dates given
+This app will not download the same image twice
+This app allows a react app to serve the images downloaded locally
 
 Programming Exercise The exercise we’d like to see is to use the NASA API described here to build a project in GitHub that calls the Mars Rover API and selects a picture on a given day. We want your application to download and store each image locally.
 
