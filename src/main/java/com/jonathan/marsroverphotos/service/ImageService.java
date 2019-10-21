@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Save images locally
@@ -71,7 +72,7 @@ public class ImageService {
         File[] files = photoDir.listFiles();
         if (files != null && files.length < 1) return photos;
 
-        for (File file : files) {
+        for (File file : Objects.requireNonNull(files)) {
             photos.add(new Photo(file));
         }
 
