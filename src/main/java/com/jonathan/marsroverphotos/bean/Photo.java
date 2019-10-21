@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.Objects;
 
 public class Photo {
-    static final String APP_FILE_PATH = "rover/";
+    private static final String APP_FILE_PATH = "rover/";
 
     private String localFilePath; // Local file path
     private File file;          // file
@@ -29,8 +29,10 @@ public class Photo {
     }
 
     public void configureFile(String filename) {
+//        String filePath = !Objects.equals(filename, "") ? createRelativeFilename(filename) : "";
         String filePath = !Objects.equals(filename, "") ? createRelativeFilename(filename) : "";
         File file = new File(filePath);
+//        File file = new File(filename);
         configureFile(file);
     }
 

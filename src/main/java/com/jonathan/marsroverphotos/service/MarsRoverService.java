@@ -21,7 +21,6 @@ public class MarsRoverService {
     private static final String API_KEY = "LpC7lceFeB1D87wz5oc00BNqQTWfawv4gV2tRvq7";
     private static final String NASA_URL = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=%s&api_key=" + API_KEY;
     private List<Photo> photosList = new ArrayList<>();
-    private List<URL> imageUrls;
 
     private static DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("Y-MM-dd", Locale.ENGLISH);
 
@@ -39,13 +38,6 @@ public class MarsRoverService {
      */
     public List<Photo> getPhotosList() {
         return photosList;
-    }
-
-    /**
-     * @return List of Image URLs from NASA API
-     */
-    public List<URL> getImageUrls() {
-        return imageUrls;
     }
 
     /**

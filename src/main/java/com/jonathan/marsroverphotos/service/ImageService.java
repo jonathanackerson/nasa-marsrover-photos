@@ -72,7 +72,8 @@ public class ImageService {
         File[] files = photoDir.listFiles();
         if (files != null && files.length < 1) return photos;
 
-        for (File file : Objects.requireNonNull(files)) {
+        for (File file : files) {
+            System.out.println("files: " + file);
             photos.add(new Photo(file));
         }
 
