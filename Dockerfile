@@ -11,5 +11,6 @@ RUN mvn install
 FROM openjdk:11-jre
 WORKDIR /app
 COPY --from=build /app/target/marsroverphotos-0.0.1-SNAPSHOT.jar /app
+RUN mkdir -p /app/photos/rover
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "marsroverphotos-0.0.1-SNAPSHOT.jar"]
