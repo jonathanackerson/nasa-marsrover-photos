@@ -1,8 +1,13 @@
 Instructions to run from docker:
+
 1 - Download Dockerfile
+
 2 - Run # docker build -t roverdocker .
+
 3 - Run # docker run -p 8080:8080 roverdocker
+
 4 - Go to localhost:8080
+
 
 
 Display images taken from the mars rover
